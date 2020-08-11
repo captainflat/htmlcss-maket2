@@ -7,7 +7,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     text-align: center;
     display: flex;
-    width: 1150px;
+    width: 1110px;
     height: 90px;
     text-transform: uppercase;
     flex-direction: row;
@@ -27,17 +27,18 @@ body {
 
 .header-menu {
     font-size: 15px;
-    width: 480px;
+    width: 500px;
     height: 89px;
-    text-align: center;
+    text-align: right;
 }
 
 .header-menu::first-letter {
     color: #34b297;
 }
 
-ul {
+.header-menu ul {
     display: flex;
+    justify-content: right;
     margin: 0;
     padding: 0;
     width: 480px;
@@ -48,13 +49,12 @@ ul {
     color: #34b297;
 }
 
-li {
-    margin-right: 15px;
+.header-menu li {
+    margin-left: 15px;
     list-style: none;
-    display: inline;
 }
 
-a {
+.header-menu a {
     text-decoration: none;
     color: #000;
 }
@@ -70,26 +70,53 @@ a {
 
 .slider {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    flex-direction: row;
     margin: 0 auto;
     width: 1140px;
-    padding-top: 180px;
+    padding-top: 200px;
 }
 
 .slider-text {
     text-transform: uppercase;
     font-family: 'Roboto', sans-serif;
+    color: #fff;
+    margin-right: 50px;
+    margin-left: 100px;
+}
+
+.slider::before {
+    content: '<';
+    display: inline-block;
+    background-color: #53a08e;
+    width: 105px;
+    height: 85px;
+    opacity: 0.9;
+    margin-top: 30px;
+    margin-left: 20px;
+    padding-top: 15px;
+    font-size: 60px;
     text-align: center;
     color: #fff;
-    margin-right: 60px;
-    margin-left: 60px;
+}
+
+.slider::after {
+    content: '>';
+    display: inline-block;
+    background-color: #53a08e;
+    text-align: center;
+    padding-top: 15px;
+    font-size: 60px;
+    color: #fff;
+    width: 105px;
+    height: 85px;
+    opacity: 0.9;
+    margin-top: 30px;
 }
 
 .slider-text h2 {
-    font-size: 54px;
-    margin-bottom: 20px;
+    font-size: 60px;
+    margin-bottom: 30px;
+    margin-top: 0;
 }
 
 .slider-text p {
@@ -97,28 +124,6 @@ a {
     margin-top: 0;
 }
 
-.slider-arrow1 {
-    width: 105px;
-    height: 105px;
-    background-color: #6dbaa7;
-    margin-top: 100px;
-}
-
-
-.slider-arrow2 {
-    width: 105px;
-    height: 105px;
-    background-color: #6dbaa7;
-    margin-top: 100px;
-}
-
-.slider-arrow-p {
-    font-size: 50px;
-    text-align: center;
-    margin: 0;
-    padding-top: 25px;
-    color: #fff;
-}
 
 .section-catalog-cart {
     display: flex;
@@ -132,26 +137,20 @@ a {
     text-align: center;
     text-transform: uppercase;
     font-family: 'Roboto', sans-serif;
-    font-size: 50px;
+    font-size: 40px;
     color: #515151;
 }
 
-/* .section-h h3:after {
-    content: '';
-    background-color: #1abc9c;
-    width: 130px;
-    height: 5px;
-    margin: 0 auto;
-} */
-
-.line {
+.section-h::after {
+    content: ' ';
+    display: block;
     background-color: #1abc9c;
     width: 130px;
     height: 5px;
     margin: 0 auto;
 }
 
-.section-catalog {
+.section-catalog ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -163,18 +162,8 @@ a {
 .catalog-cart {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     margin: 0 15px;
     font-family: 'Roboto', sans-serif;
-}
-
-.catalog-cart:hover  {
-    background-color: #1abc9c;
-
-}
-
-.catalog-cart-descrition:hover {
-    background-color: #1abc9c;
 }
 
 img {
@@ -186,28 +175,29 @@ img {
     display: flex;
     flex-direction: row;
     justify-content: center;
+
+}
+
+.name-cart {
+    background-color: #323232;
     color: #fff;
     text-transform: uppercase;
+    width: 220px;
+    height: 40px;
+    margin: 0;
+    align-self: flex-start;
 }
 
-h4 {
-    width: 210px;
-    height: 28px;
-    margin: 0;
-    padding-left: 15px;
-    padding-top: 10px;
-    background-color: #323232;
-}
-
-.catalog-cart p {
-    margin: 0;
-    width: 55px;
-    height: 28px;
-    text-align: center;
+.cost-cart {
     background-color: #8c8c8c;
-    padding-top: 10px;
+    color: #fff;
+    height: 40px;
+    width: 56px;
+    margin: 0;
+    align-self: flex-end;
 }
 
+/* ----------------------------footer--> */
 footer {
     height: 85px;
     background-color: #323232;
