@@ -251,6 +251,10 @@ body {
     background-color: #7fd9c7;
 }
 
+.cart-item-hover-fav3:hover {
+    background-color: #7fd9c7;
+}
+
 .cart-item-hover {
     margin: 0;
     width: 50px;
